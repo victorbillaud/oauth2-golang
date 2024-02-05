@@ -1,0 +1,143 @@
+{
+  "yaakVersion": "2024.2.0",
+  "yaakSchema": 1,
+  "timestamp": "2024-02-05T18:25:58.653465",
+  "resources": {
+    "workspaces": [
+      {
+        "id": "wk_MKUPOR3qec",
+        "model": "workspace",
+        "createdAt": "2024-02-05T18:14:57",
+        "updatedAt": "2024-02-05T18:15:34",
+        "name": "OAuthGo",
+        "description": "",
+        "variables": [
+          {
+            "enabled": true,
+            "name": "WEBSITE_URL",
+            "value": "http://localhost:9096"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ],
+        "settingValidateCertificates": true,
+        "settingFollowRedirects": true,
+        "settingRequestTimeout": 0
+      }
+    ],
+    "environments": [
+      {
+        "id": "ev_hU6otK0iqi",
+        "workspaceId": "wk_MKUPOR3qec",
+        "model": "workspace",
+        "createdAt": "2024-02-05T18:15:15",
+        "updatedAt": "2024-02-05T18:15:15",
+        "name": "local",
+        "variables": []
+      }
+    ],
+    "folders": [],
+    "requests": [
+      {
+        "createdAt": "2024-02-05T18:15:01",
+        "updatedAt": "2024-02-05T18:20:58",
+        "id": "rq_aPDSkj0gN6",
+        "workspaceId": "wk_MKUPOR3qec",
+        "folderId": null,
+        "model": "http_request",
+        "sortPriority": 1000.0,
+        "name": "token route",
+        "url": "${[ WEBSITE_URL ]}/token",
+        "urlParameters": [
+          {
+            "enabled": true,
+            "name": "grant_type",
+            "value": "client_credentials"
+          },
+          {
+            "enabled": true,
+            "name": "client_id",
+            "value": "3e4b33d8"
+          },
+          {
+            "enabled": true,
+            "name": "client_secret",
+            "value": "253e2cd8"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ],
+        "method": "GET",
+        "body": {},
+        "bodyType": null,
+        "authentication": {},
+        "authenticationType": null,
+        "headers": []
+      },
+      {
+        "createdAt": "2024-02-05T18:16:06",
+        "updatedAt": "2024-02-05T18:21:44",
+        "id": "rq_gE6LAINYtA",
+        "workspaceId": "wk_MKUPOR3qec",
+        "folderId": null,
+        "model": "http_request",
+        "sortPriority": 0.0,
+        "name": "protected route",
+        "url": "${[ WEBSITE_URL ]}/protected",
+        "urlParameters": [
+          {
+            "enabled": true,
+            "name": "access_token",
+            "value": "OSK8NUAIMZMGEOFMDOPSGQ"
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ],
+        "method": "GET",
+        "body": {},
+        "bodyType": null,
+        "authentication": {},
+        "authenticationType": null,
+        "headers": [
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          },
+          {
+            "enabled": true,
+            "name": "",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "createdAt": "2024-02-05T18:16:36",
+        "updatedAt": "2024-02-05T18:16:42",
+        "id": "rq_BYHglS09yR",
+        "workspaceId": "wk_MKUPOR3qec",
+        "folderId": null,
+        "model": "http_request",
+        "sortPriority": 1000.0,
+        "name": "credentials route",
+        "url": "${[ WEBSITE_URL ]}/credentials",
+        "urlParameters": [],
+        "method": "GET",
+        "body": {},
+        "bodyType": null,
+        "authentication": {},
+        "authenticationType": null,
+        "headers": []
+      }
+    ]
+  }
+}
